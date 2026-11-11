@@ -1,0 +1,115 @@
+:root {
+    --pMain: #eb95ba;
+    --gMain: #6ec288;
+    --yMain: #f9cf98;
+    --rDark: #7a112e;
+    --bigBorder: 10px dashed var(--pMain);
+}
+
+body {
+    background-color: #fff;
+    font-size: 1.3em;
+    font-family: Roboto, sans-serif;
+}
+
+.bar {
+    border-block: var(--bigBorder);
+    padding: 5px;
+    text-align: center;
+    background-color: var(--gMain);
+    color: #fff;
+
+    ul {
+        list-style-type: none;
+        line-height: 1.5em;
+    }
+}
+
+header {
+    line-height: 1.75em;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+nav {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        float: right;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.newsflex {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        text-align: left;
+        line-height: 1.2em;
+        font-size: 1.5em;
+    }
+
+    div:nth-of-type(2n) {
+        text-align: right;
+
+        h2 {
+            text-align: right;
+        }
+    }
+}
+
+.catgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    img {
+        float: left;
+    }
+}
+
+.menugrid {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+
+    img {
+        float: left;
+    }
+}
+
+.homebutton {
+    position: fixed;
+    left: 88%;
+    top: 93%;
+}
+
+#desc {
+    line-height: 1.25em;
+    padding: 5px;
+}
+
+a {
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .bar {
+        li {
+            display: inline-block;
+        }
+    }
+
+    .newsflex {
+        flex-direction: row;
+    }
+}
